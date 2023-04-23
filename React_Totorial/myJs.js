@@ -1,5 +1,18 @@
-const container = document.createElement('div');
-container.classList.add('container');
+
+function generateElement(tagName,attribute) {
+    const element =document.createElement(tagName);
+    Object.keys(attribute).forEach(key => {
+    element.setAttribute(key,attribute[key]);
+    })
+    return element;
+}
+
+
+
+// const container = document.createElement('div');
+// container.classList.add('container');
+
+const container = generateElement('div',{class:'container'});
 
 function generateCart(name, age) {
     const cart = document.createElement('div');

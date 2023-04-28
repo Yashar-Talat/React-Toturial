@@ -14,10 +14,20 @@
             src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <div id="root"></div>
+
+
         <script type="text/babel">
-       const name = "Yashar-Talat";
-       const element = <div>Hello {name}</div>
-       ReactDOM.render(element,document.getElementById('root'));
+        class HelloWorld extends React.Component {
+          render() {
+            return <div>Hello World!</div>
+          }
+        }
+
+        ReactDOM.render(<HelloWorld/>, document.getElementById('root'));
+
+
+
+
     </script>
     </body>
 </html>

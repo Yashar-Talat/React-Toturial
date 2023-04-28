@@ -17,17 +17,44 @@
 
 
         <script type="text/babel">
-        class HelloWorld extends React.Component {
-          render() {
-            return <div>Hello World!</div>
-          }
+
+        class Username extends React.Component {
+            render() {
+                return <div className = "form-element">
+                           <label htmlFor="username">UserName</label>
+                           <input type="text" id="username" />
+                       </div>
+            }
         }
 
-        ReactDOM.render(<HelloWorld/>, document.getElementById('root'));
+        class Password extends React.Component {
+            render() {
+                return <div className = "form-element">
+                           <label htmlFor="password">Password</label>
+                           <input type="text" id="password" />
+                       </div>
+            }
+        }
+
+        function Submit() {
+         return <button type="Submit">Submit</button>
+        }
+        
+        class SignForm extends React.Component{
+            render() {
+                return <form>
+                        <Password/>
+                        <Username/>
+                        <Submit/>
+                       </form>
+            }
+        }
+        
+        ReactDOM.render(<SignForm/> , document.getElementById('root'));
 
 
 
 
-    </script>
+       </script>
     </body>
 </html>

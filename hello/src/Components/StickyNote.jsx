@@ -1,56 +1,16 @@
 import React from "react";
+import Notes from "./Notes";
+export default function stickyNote() {
 
-export default function StickyNote() {
-  return (
-    <ul>
-      <li>
-        <a href="#">
-          <h2>Title #1</h2>
-          <p>Text Content #1</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #2</h2>
-          <p>Text Content #2</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #3</h2>
-          <p>Text Content #3</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #4</h2>
-          <p>Text Content #4</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #5</h2>
-          <p>Text Content #5</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #6</h2>
-          <p>Text Content #6</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #7</h2>
-          <p>Text Content #7</p>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h2>Title #8</h2>
-          <p>Text Content #8</p>
-        </a>
-      </li>
-    </ul>
-  );
+  const notesData = [
+    { title: "Title #1", content: "Text Content #1" },
+    { title: "Title #2", content: "Text Content #2" },
+    { title: "Title #3", content: "Text Content #3" },
+  ];
+  const note = notesData.map(note => 
+    <Notes title={note.title} content={note.content} />);
+
+  return <ul>
+    {note}
+  </ul>;
 }
